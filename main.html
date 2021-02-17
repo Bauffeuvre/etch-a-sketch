@@ -1,0 +1,68 @@
+<!html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<div class="myDiv">
+
+</div>
+
+
+<script>
+
+createGrid()
+
+
+
+function createGrid() {
+    for (i=0; i < 16; i++) {
+var grid = document.createElement("div") ;
+grid.className = `container` ;
+document.body.appendChild(grid) ;
+    }
+}
+ 
+document.querySelectorAll(".container").forEach(div => {
+    div.addEventListener("mouseover", event => {
+        console.log(event)
+        event.target.style.backgroundColor = 'blue'
+       }
+    )
+})
+
+
+</script>
+</body>
+
+<style>
+
+.container {
+    box-sizing: border-box;
+      float: left;
+      width: 50px; 
+      height: 50px; 
+      margin: 0;
+      padding: 0;   
+    border: 1px solid #404040; } 
+
+body {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+    width: 200px;
+      height: 200px;
+      border: solid 1px #000;
+}
+
+
+
+    </style>
+
+
+</html>
+
