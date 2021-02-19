@@ -2,7 +2,9 @@ function nbRows() {
     document.querySelectorAll(".container").forEach((div) => {
         document.getElementById("myDiv").innerHTML = ""});
     
+
         var rowNb = prompt("Please enter the number of rows of one side :");
+   	if (rowNb <= 100 && rowNb > 0) {
     for (i = 0; i < rowNb * rowNb; i++) {
         var container = document.createElement("div");
         container.className = "container";
@@ -15,6 +17,10 @@ function nbRows() {
       });
 
       myDiv.style.gridTemplateColumns = 'auto '.repeat(rowNb);
+  }
+  else {
+  	alert("Please enter a number between 0 and 100.")
+  }
 }
 
 

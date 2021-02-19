@@ -20,9 +20,15 @@ p {
 
 .buttons{
     display: flex;
-    justify-content: center;
+   justify-content: center;
     align-items: center;
-    padding:10px
+
+}
+
+.button{
+    display: flex;
+ 
+    margin: 5px;
 
 }
 .box {
